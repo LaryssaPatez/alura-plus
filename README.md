@@ -10,7 +10,7 @@
     <img width=800 src="gif.gif"/>
 </p>
 <p align="center">
-<a href"https://alura-plus-two-kappa.vercel.app/">Acesse o site</a>
+<a href"https://alura-plus-two-kappa.vercel.app">Acesse o site</a>
 </p>
 
 # 📕 Sobre
