@@ -5,11 +5,13 @@
 <p align="left">
     <img width=150 src="https://img.shields.io/badge/STATUS-EM_DESENVOLVIMENTO-GREEN"/>
 </p>
-<h3 align="center">
-    <img width=500 src="./gif.gif"/>
-    <a href"">Acesse o site</a>
-</h3>
 
+<p align="center">
+    <img width=500 src="gif.gif"/>
+</p>
+<p align="center">
+<a href"https://alura-plus-two-kappa.vercel.app/">Acesse o site</a>
+</p>
 
 # 📕 Sobre
 Esse repositório corresponde a formação de HTML e CSS para projetos web da Alura. Ao fim, teremos o site Alura Plus pronto.
