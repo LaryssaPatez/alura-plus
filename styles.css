@@ -1,0 +1,194 @@
+/*fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --azul-botao: #2bdefd;
+    --cor-fundo: #00030C;
+    --cor-click-fundo: #b2f4ff;
+    --cor-click-font: #092d5d;
+    --fonte-principal: 'inter';
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--branco-principal);
+
+    /*Perceba que todo o site possui a mesma fonte, corrreto?
+    Então vamos definir a fonte aqui no body e ela irá aplicar em todo site, depois é só ajustar as particularidades nas class dos elementos:
+
+    */
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400px;
+}
+
+/*Vamos retirar a margem e padding da página para depois adicionarmos os espaçamentos que queremos ;) 
+
+E o asterisco serve para selecionar todos os elementos da página.
+
+                               ⇣⇣⇣
+*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.principal{
+    background-image: url(assets/Background.png); /*adicionamos background-image na section dos elementos que aquele background deverá preencher*/
+    background-repeat: no-repeat; /*Sem essa tag, a imagem de fundo irá se repetir em todas as páginas, não queremos isso, então, adicionamos essa propriedade
+    lembrando que isso ocorreu depois que adicionamos a propriedade height no .container
+    */
+    background-size: contain; /*Indica o tamanho do background. Nós definimos como contain, então ele irá ocupar todo o container e retirar os espaçamentros das laterais.
+    
+    No caso, o nosso container é a section.
+    */
+
+    align-items: center; /*essa propriedade irá alinhar os elementos no centro da coluna que eles estão.Lembre-se, não irá alinhar no centro da página inteira, somente daquela coluna que o elemento está.
+    */
+    text-align: center; /*essa propriedade alinha todos os elementos que estão dentro de um elemento de bloco. 
+    Na section, ela por padrão vem com elemento de bloco, então essa propriedade alinha tudo o que está dentro e não somente os textos, apesar o nome da propriedade ser "text-align".
+
+    ELEMENTOS DE BLOCO SÃO: SECTION, DIV.. 
+    */
+}
+
+.container {
+    height: 100vh; /*Com essa propriedade, o site irá detectar qual a altura do dispositivo do usuário e distribuir a imagem em 100% = 100vh da tela*/
+    display: grid; /*Para definir que a página será dividida em grades*/
+    grid-template-columns: 50% 50%; /*Define o tamanho das divisões da página, por exemplo: Se adicionarmos 3 valores, então ela terá 3 divisões em colunas pois colocamos a propriedade -columns
+    */
+}
+
+/*Agora vamos estilar os botões*/
+
+.container__caixa { 
+    margin: 0 6em; /*Margem da esquerda referente a toda a caixa que abrenge os elementos da div*/
+}
+
+.container__titulo {
+    font-size: 28px;
+    font-weight: 700px;
+}
+
+.container__imagem {
+    margin: 1em 0 2em 0; /*margem da imagem, ou seja, espaçamento entre a imagem, titulo e botões, lembrando que os valores são distribuidos como um relógio.
+    */
+}
+
+.container__botao {
+    background-color: var(--azul-botao);
+    color: var(--branco-principal);
+    border-radius: 5px; /*arredondamentos das bordas*/
+    padding: 1em; /*em é uma medida que define o tamanho do preenchimento interno do botão e essa medida depende do tamanho da fonte que estamos utilizando naquele botão. 
+    Então se o tamanho da fonte é 16, o padding será de 16px. 
+    */
+    display: block; /*Quebra de linha e faz com que o botão ocupe toda a tela*/
+    text-decoration: none;
+    margin-bottom: 1em; /*espaçamento entre os botões*/
+}
+
+.container__botao:hover {
+    background-color: var(--cor-click-fundo);
+    border: solid var(--azul-botao);
+    color: var(--cor-click-font);
+}
+
+.botao__secundario {
+    background-color: transparent;
+    border: 2px solid var(--branco-principal); /*arredondamento das bordas + tipo do contorno do botão + cor do contorno*/
+}
+
+.container__aviso {
+    font-size: 13px;
+    color: var(--cinza-secundario);
+}
+
+.secundario__imagem {       
+    width: 80%; /*a imagem irá ocupar 80% da página (medida responsiva)*/    
+}
+
+/*vamos centralizar a imagem + texto na tela*/
+.secundario {
+    align-items: center; 
+    margin: 0 10em ;
+}
+
+.descricao__titulo {
+    font-size: 48px;
+    color: var(--branco-principal);
+    font-weight: 700;
+    margin-bottom: 0.1em; /*define a margem inferior de um elemento*/
+}
+
+.secundario__botao {
+    display: inline-block; /*essa propriedade transforma o botao em linha, então se houvesse outro botão, eles iriam ficar um do lado do outro, poém não há outro botão, então ele ocupa somente o espacinho dele mesmo, o botão se ajusta ao texto (definimos essas propriedades anteriormente no primeito botão).
+    */
+    margin-top: 0.5em; /*define a margem superior de um elemento*/
+}
+
+.descricao__texto {
+    color: var(--cinza-secundario);
+}
+
+.container__descricao {
+    padding: 2em; /*tamanho da caixa que está o texto*/
+}
+
+.texto__terciario {
+    color: var(--cinza-secundario);
+}
+
+.dispositivos__lista{
+    display: flex; /*posiciona os elementos um ao lado do outro*/
+    justify-content: center;
+    list-style-type: none; /*retira os pontinhos que sinalizam a lista*/
+    margin: 2em 0; /*margem cima // baixo*/
+}
+
+.dispositivos {
+    text-align: center; /*alinha todos os elementos da página no centro, essa propriedade é adicionada na tag pai*/
+}
+
+.lista__item {
+    font-size: 24px;
+    color: var(--branco-principal);
+}
+
+.rodape {
+    display: block; /*quebra de linha entre os elementos do bloco*/
+    text-align: center; /*alinha todos os elementos ao centro*/
+    margin: 5em 10em 3em 10em; /*margem de todo o bloco e para os valores, pensar no relógio
+}
+
+.rodape__logo{
+    width: 6%; /*tamanho logo*/
+}
+.rodape__lista{
+    display: flex; /*alinha cada item da lista um na frente do outro*/
+    justify-content: center; 
+    list-style-type: none; /*retira aquelas bolinhas dos itens*/
+    gap: 1em; /*espaçamento entre os itens da lista*/
+}
+
+.lista__link {
+    color: var(--branco-principal);
+    margin-top: 2em; /*espaçamento superior da lista*/
+}
+
+.link__botao{
+    text-decoration: none;
+    color: var(--branco-principal);
+}
+
+.link__botao:hover {
+    color: var(--azul-botao);
+}
+
+.rodape__paragrafo {
+    color: var(--cinza-secundario);
+    font-size: 14px;
+    margin-top: 2em; /*espaçamento superior dos dois parágrafos*/
+}
+
