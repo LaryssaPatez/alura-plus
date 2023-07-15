@@ -1,5 +1,4 @@
 <h1 align="center"> 
-    <img src="">
     <p>Alura Plus</p>
 </h1>
 
@@ -7,7 +6,7 @@
     <img width=150 src="https://img.shields.io/badge/STATUS-EM_DESENVOLVIMENTO-GREEN"/>
 </p>
 <h3 align="center">
-    <img width=500 src="https://github.com/LaryssaPatez/alura-plus/issues/1#issue-1806146938"/>
+    <img width=500 src="./gif.gif"/>
     <a href"">Acesse o site</a>
 </h3>
 
